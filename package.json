@@ -1,0 +1,22 @@
+{
+  "name": "project-express-js-nicosaputra2327240039-arch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Web-Programming/project-express-js-nicosaputra2327240039-arch.git"
+  },
+  "author": "NicoSaputra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Web-Programming/project-express-js-nicosaputra2327240039-arch/issues"
+  },
+  "homepage": "https://github.com/Web-Programming/project-express-js-nicosaputra2327240039-arch#readme",
+  "dependencies": {
+    "expres": "^0.0.5"
+  }
+}
