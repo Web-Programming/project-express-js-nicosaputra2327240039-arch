@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "name":"laptop gaming",
+        "price":15000000,
+        "description":"laptop keren"
+    },
+
+    {
+        "id": 2,
+        "name":"kursi gaming",
+        "price":15000000,
+        "description":"kursi mantap"
+    },
+
+    {
+        "id": 3,
+        "name":"meja gaming",
+        "price":15000000,
+        "description":"meja keren"
+    },
+
+    {
+        "id": 4,
+        "name":"mouse gaming",
+        "price":15000000,
+        "description":"mouse keren"
+    },
+
+    {
+        "id": 5,
+        "name":"headset gaming",
+        "price":15000000,
+        "description":"headset super"
+    }
+]
