@@ -1,11 +1,19 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<% layout('layout') %>
+
+<div class="container mt-5">
+  <h1 class="text-center mb-4"><%= title %></h1>
+  <div class="row">
+    <% products.forEach(function(product) { %>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title"><%= product.name %></h5>
+            <p class="card-text"><%= product.description %></p>
+            <p class="card-text fw-bold">Rp <%= product.price.toLocaleString('id-ID') %></p>
+            <a href="/produk/<%= product.id %>" class="btn btn-primary mt-auto">Detail Produk</a>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+</div>
