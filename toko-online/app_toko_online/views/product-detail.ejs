@@ -1,0 +1,27 @@
+<% layout('layout') %> 
+<!-- ⬆ Layout utama akan digunakan, sehingga navbar & bootstrap otomatis terload -->
+
+<div class="container mt-5">
+  <!-- Card dengan shadow supaya terlihat modern -->
+  <div class="card p-4 shadow">
+    <!-- Judul produk -->
+    <h1 class="card-title"><%= product.name %></h1>
+    <hr>
+
+    <!-- Deskripsi produk -->
+    <p class="card-text">
+      <strong>Deskripsi:</strong> <%= product.description %>
+    </p>
+
+    <!-- Harga produk dengan format Rupiah -->
+    <p class="card-text">
+      <strong>Harga:</strong> 
+      Rp <%= product.price.toLocaleString('id-ID') %>
+    </p>
+
+    <!-- Tombol kembali ke halaman utama -->
+    <a href="/" class="btn btn-secondary mt-3">
+      Kembali ke Beranda
+    </a>
+  </div>
+</div>
