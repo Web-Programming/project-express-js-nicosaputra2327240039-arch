@@ -32,25 +32,23 @@ router.get("/search", function (req, res, next) {
   });
 });
 
-// --- ROUTE DETAIL PRODUK ---
-router.get("/:id", function (req, res, next) {
-  const productId = parseInt(req.params.id);
-  console.log("Request produk ID:", productId);
+// Detail produk
+router.get('/:id', function(req, res, next) {
+  const id = parseInt(req.params.id); // pastikan angka
+  const product = products.find(p => p.id === id);
 
-  // Cari produk sesuai ID di array JSON
-  const product = products.find(p => p.id === productId);
-
-  // Jika produk tidak ditemukan, kirimkan error 404
   if (!product) {
-    console.log("Produk tidak ditemukan!");
-    return res.status(404).send("Produk tidak ditemukan!");
+    return res.status(404).render('error', { 
+      message: 'Produk tidak ditemukan', 
+      error: {} 
+    });
   }
 
-  // Jika produk ditemukan, render product-detail.ejs dengan data produk.
-  res.render("product-detail", {
-    title: product.name,
-    product: product,
+  res.render('product-detail', { 
+    title: product.name, 
+    product: product 
   });
 });
+
 
 module.exports = router;

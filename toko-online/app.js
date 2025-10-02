@@ -26,8 +26,7 @@ app.use('/bootstrap', express.static(path.join(__dirname,'node_modules/bootstrap
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-var productRouter = require('./app_toko_online/routes/product'); //letakkan di atas agar rapi
-app.use("/produk" ,productRouter);
+app.use('/produk' ,productRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

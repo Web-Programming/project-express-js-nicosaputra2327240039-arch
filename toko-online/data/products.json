@@ -3,8 +3,7 @@
         "id": 1,
         "name":"laptop gaming",
         "price":15000000,
-        "description":"laptop keren",
-        "image":"/Pictures/laptop gaming.jpg"
+        "description":"laptop keren"
     },
 
     {
