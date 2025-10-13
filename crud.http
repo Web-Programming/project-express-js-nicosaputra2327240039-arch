@@ -1,0 +1,13 @@
+// get all product
+GET https://localhost:3000/api/produk
+
+// insert new product
+POST http://localhost:3000/api/produk
+content-type: application/json
+
+{
+    "name": "Mouse Gaming",
+    "price": "300000",
+    "description": "hyper sensitive mouse",
+    "stock": 12
+}

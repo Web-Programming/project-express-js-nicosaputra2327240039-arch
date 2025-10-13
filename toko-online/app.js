@@ -11,6 +11,7 @@ var productRouter = require('./app_toko_online/routes/product')
 var engine = require('ejs-blocks'); //menggunakan ejs block
 var app = express();
 
+var apiProductRouter = require("./app_toko_online/routes/api/product");
 // view engine setup
 app.set('views', path.join(__dirname, 'app_toko_online', 'views')); //perbaikan ke 1
 app.engine('ejs', engine);  //daftarkan engine ejs block
@@ -27,6 +28,7 @@ app.use('/bootstrap', express.static(path.join(__dirname,'node_modules/bootstrap
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/produk' ,productRouter);
+app.use("/api/product", apiProductRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

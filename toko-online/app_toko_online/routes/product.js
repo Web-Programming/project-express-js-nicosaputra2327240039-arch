@@ -4,6 +4,10 @@ var products = require('../../data/products.json');
 // ⬆ Import express dan buat router baru.
 // ⬆ Import data produk dari file JSON agar bisa digunakan di route.
 
+router.get("/apiall", productController.apiall);
+router.get("/all", productController.index);
+router.get("/:id", productController.detail);
+
 // --- ROUTE SEARCH ---
 router.get("/search", function (req, res, next) {
   // Tangkap query pencarian dari URL, misalnya /produk/search?q=mouse
